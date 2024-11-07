@@ -1,3 +1,5 @@
+/* Bubble sort with time complexity of o(n^2) */
+
 #include<iostream>
 #include<cstdlib>
 using namespace std;
