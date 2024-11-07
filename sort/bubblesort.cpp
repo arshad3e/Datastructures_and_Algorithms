@@ -4,6 +4,8 @@
 #include<cstdlib>
 using namespace std;
 
+/* Bubble sort Algorithm */
+
 void bubblesort(int arr[], int n){
 int i,j;
         for(int i=0;i<n-1;i++){
