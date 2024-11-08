@@ -1,3 +1,5 @@
+/* this insertion sort has a time complexity on o(n^2) and time complexity of o(1) */
+
 #include<iostream>
 #include<cstdlib>
 using namespace std;
