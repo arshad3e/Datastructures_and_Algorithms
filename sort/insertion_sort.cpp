@@ -4,17 +4,18 @@
 #include<cstdlib>
 using namespace std;
 
+/*logic for insertion sort*/
 void insertion(int arr[], int n){
 
         for(int i=1 ; i<n; i++){
-                int key = arr[i];
-                int j = i-1;
+                int key = arr[i]; //consider as a pack of cards where we start from card 2 and compare with card 1 and then exchange
+                int j = i-1; //this will be the first card that was supposed to be compared
 
-                while(j >=0 && arr[j] > key){
+                while(j >=0 && arr[j] > key){ //this loop will continue as long as it takes for example when it comes to value 1 it will compare with 2,5,9 and new=2,2,5,9,5,6
                         arr[j+1] = arr[j];
                         j--;
                 }
-                arr[j+1] = key;
+                arr[j+1] = key; // here is where 1 will be reassigned to the array 1,2,5,9,5,6
                 }
 }
 
