@@ -1,6 +1,10 @@
+/*Selection sort for example (9,8,7,6) we will select 9 as min_index and then compare with 8,7,6 since it is greater than 6 it is swapped and 6,8,7,9
+time complexity of o(n^2)*/
+
 #include<iostream>
 using namespace std;
 
+/* logic to support swapping*/
 void swap(int *num1, int *num2){
         int temp =0;
         temp = *num1;
