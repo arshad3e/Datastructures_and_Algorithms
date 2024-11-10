@@ -1,3 +1,9 @@
+/* This program is based on the sorting algorithm called MergeSort
+This algorithm is based on the divide and concur approach
+Time complexity = O(n log n)
+Space Complexity = O(n)
+*/
+
 #include <iostream>
 #include <cstdlib>
 using namespace std;
