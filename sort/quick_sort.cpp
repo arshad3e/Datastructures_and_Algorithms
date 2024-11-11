@@ -55,9 +55,37 @@ int main() {
     return 0;
 }
 
+/*Explanation of Code:
+swap:
+
+This function swaps two integer values, used to rearrange elements during partitioning.
+partition:
+
+This function arranges elements around a pivot.
+Elements smaller than the pivot are moved to the left, and elements greater are moved to the right.
+At the end of the loop, the pivot is placed in its correct sorted position.
+quickSort:
+
+The recursive Quick Sort function.
+It calls the partition function to sort around a pivot.
+Then, it recursively sorts the left and right subarrays around the pivot.
+main:
+
+Calls quickSort on an example array and displays the sorted result.
+Output:
+With the input {10, 7, 8, 9, 1, 5}, the output will be:
+
+javascript
+Copy code
+Original Array: 10 7 8 9 1 5
+Sorted Array: 1 5 7 8 9 10
+Summary
+Pivot Selection: Determines where to "split" the array.
+Partitioning: Rearranges elements so the pivot ends up in its final position.
+Recursive Calls: Divides the array and sorts smaller parts independently, leading to a fully sorted array.
 
 
-/* Quick Sort Logic:
+ Quick Sort Logic:
 Choose a Pivot:
 
 Quick Sort works by selecting a "pivot" element from the array. The choice of pivot can vary, but a common choice is the last element in the array segment being sorted.
