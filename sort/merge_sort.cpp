@@ -87,3 +87,74 @@ int main() {
     return 0;
 }
 
+/* 
+Merge Sort is a Divide and Conquer algorithm:
+
+Divide: Split the array into two halves until each part contains a single element.
+Conquer: Recursively sort each half.
+Combine: Merge the sorted halves into a single sorted array.
+Key Idea
+Break the array into smaller parts.
+Merge two sorted arrays into one sorted array during the merging phase.
+Example: Sorting [6, 3, 8, 5, 2, 7, 4, 1]
+Initial Array
+csharp
+Copy code
+[6, 3, 8, 5, 2, 7, 4, 1]
+Step-by-Step Process
+Divide the Array:
+
+Split into two halves:
+less
+Copy code
+Left: [6, 3, 8, 5]
+Right: [2, 7, 4, 1]
+Divide Again:
+
+Split [6, 3, 8, 5] into [6, 3] and [8, 5].
+Split [2, 7, 4, 1] into [2, 7] and [4, 1].
+Divide Further Until Single Elements:
+
+[6, 3] becomes [6] and [3].
+[8, 5] becomes [8] and [5].
+[2, 7] becomes [2] and [7].
+[4, 1] becomes [4] and [1].
+Merge and Sort:
+
+Merge [6] and [3] → [3, 6].
+Merge [8] and [5] → [5, 8].
+Merge [2] and [7] → [2, 7].
+Merge [4] and [1] → [1, 4].
+Merge Larger Sorted Arrays:
+
+Merge [3, 6] and [5, 8] → [3, 5, 6, 8].
+Merge [2, 7] and [1, 4] → [1, 2, 4, 7].
+Final Merge:
+
+Merge [3, 5, 6, 8] and [1, 2, 4, 7] → [1, 2, 3, 4, 5, 6, 7, 8].
+Visual Breakdown of the Process
+Splitting Phase:
+css
+Copy code
+[6, 3, 8, 5, 2, 7, 4, 1]
+           /                \
+     [6, 3, 8, 5]       [2, 7, 4, 1]
+       /     \            /      \
+   [6, 3]   [8, 5]    [2, 7]   [4, 1]
+    / \       / \       / \      / \
+  [6] [3]   [8] [5]   [2] [7]  [4] [1]
+Merging Phase:
+Merge [6] and [3] → [3, 6]
+Merge [8] and [5] → [5, 8]
+Merge [2] and [7] → [2, 7]
+Merge [4] and [1] → [1, 4]
+css
+Copy code
+[3, 6]   [5, 8]   [2, 7]   [1, 4]
+Merge [3, 6] and [5, 8] → [3, 5, 6, 8]
+Merge [2, 7] and [1, 4] → [1, 2, 4, 7]
+css
+Copy code
+[3, 5, 6, 8]   [1, 2, 4, 7]
+Merge [3, 5, 6, 8] and [1, 2, 4, 7] → [1, 2, 3, 4, 5, 6, 7, 8]
+*/
