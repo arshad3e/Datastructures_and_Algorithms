@@ -58,75 +58,105 @@ int main() {
 }
 
 
-/*Explanation of Code:
-swap:
+/* What is Quick Sort?
+Quick Sort is a Divide and Conquer algorithm, where:
 
-This function swaps two integer values, used to rearrange elements during partitioning.
-partition:
+Pick a Pivot:
 
-This function arranges elements around a pivot.
-Elements smaller than the pivot are moved to the left, and elements greater are moved to the right.
-At the end of the loop, the pivot is placed in its correct sorted position.
-quickSort:
-
-The recursive Quick Sort function.
-It calls the partition function to sort around a pivot.
-Then, it recursively sorts the left and right subarrays around the pivot.
-main:
-
-Calls quickSort on an example array and displays the sorted result.
-Output:
-With the input {10, 7, 8, 9, 1, 5}, the output will be:
-
-javascript
-Copy code
-Original Array: 10 7 8 9 1 5
-Sorted Array: 1 5 7 8 9 10
-Summary
-Pivot Selection: Determines where to "split" the array.
-Partitioning: Rearranges elements so the pivot ends up in its final position.
-Recursive Calls: Divides the array and sorts smaller parts independently, leading to a fully sorted array.
-
-
- Quick Sort Logic:
-Choose a Pivot:
-
-Quick Sort works by selecting a "pivot" element from the array. The choice of pivot can vary, but a common choice is the last element in the array segment being sorted.
+Choose a pivot element from the array. Common choices include:
+First element.
+Last element.
+Random element.
+Middle element.
 Partition the Array:
 
-Rearrange the elements in the array so that all elements less than the pivot are on the left, and all elements greater than the pivot are on the right.
-After this step, the pivot is in its final position in the sorted array.
+Rearrange the elements so that all elements smaller than the pivot are placed on its left and all elements greater than the pivot are placed on its right.
 Recursively Apply Quick Sort:
 
-Apply the same logic recursively to the subarrays of elements to the left and right of the pivot.
-Example Walkthrough:
-Let's walk through a step-by-step example to understand how Quick Sort works. Consider the array:
+Apply the same steps to the left and right subarrays (excluding the pivot, which is already in its final position).
+Key Idea
+The pivot helps divide the array into smaller, easier-to-sort subarrays. By repeatedly applying this process, the array becomes sorted.
 
-css
+Example: Sorting [10, 7, 8, 9, 1, 5]
+Initial Array
+csharp
 Copy code
-arr = [10, 7, 8, 9, 1, 5]
-Initial Array: [10, 7, 8, 9, 1, 5]
+[10, 7, 8, 9, 1, 5]
+Step-by-Step Process
+Choose the Pivot:
 
-Choosing the Pivot:
+Let’s pick the last element as the pivot: pivot = 5.
+Partition the Array:
 
-Select the last element as the pivot: pivot = 5.
-Partitioning:
+Rearrange elements around the pivot so:
+Elements smaller than 5 are on the left.
+Elements greater than 5 are on the right.
+Partition Process:
 
-Rearrange the array so elements less than 5 are on the left, and elements greater than 5 are on the right.
+Start with i = -1 (to track the boundary of smaller elements).
+Iterate through the array with j (current element index):
+If arr[j] < pivot, increment i and swap arr[i] with arr[j].
+Steps:
 
-Starting with i = -1:
+vbnet
+Copy code
+[10, 7, 8, 9, 1, 5]  (Initial array, pivot = 5)
 
-Compare each element with the pivot (5).
-Swap elements as needed to keep elements smaller than 5 on the left.
-After partitioning with 5 as pivot:
+Compare 10 with 5: No swap, i = -1
+Compare 7 with 5: No swap, i = -1
+Compare 8 with 5: No swap, i = -1
+Compare 9 with 5: No swap, i = -1
+Compare 1 with 5: Swap 1 with 10 → [1, 7, 8, 9, 10, 5], i = 0
+After the loop, place the pivot 5 in its correct position by swapping it with arr[i + 1]:
 
 csharp
 Copy code
-[1, 5, 8, 9, 10, 7]
-The array is split around 5, which is now in its sorted position at index 1.
+[1, 5, 8, 9, 10, 7]  (Pivot 5 is now in position 1)
+Now, the pivot 5 is sorted, and the array is divided into:
 
+Left: [1] (elements smaller than 5)
+Right: [8, 9, 10, 7] (elements greater than 5).
 Recursive Steps:
 
-Repeat the process for the subarrays [1] (left of pivot) and [8, 9, 10, 7] (right of pivot).
+Left Subarray: [1] (already sorted).
 
-Continue partitioning and recursively applying Quick Sort until the array is sorted.*/
+Right Subarray: [8, 9, 10, 7]
+
+Pivot = 7.
+Partitioning:
+vbnet
+Copy code
+[8, 9, 10, 7]  (Pivot = 7)
+Compare 8 with 7: No swap, i = 0
+Compare 9 with 7: No swap, i = 0
+Compare 10 with 7: No swap, i = 0
+Swap 7 with 8 → [7, 9, 10, 8] (Pivot 7 in position 0)
+Now:
+Left: [] (no elements smaller than 7).
+Right: [9, 10, 8].
+Continue recursively sorting [9, 10, 8]:
+
+Pivot = 8.
+Partitioning:
+vbnet
+Copy code
+[9, 10, 8]  (Pivot = 8)
+Compare 9 with 8: No swap, i = 0
+Compare 10 with 8: No swap, i = 0
+Swap 8 with 9 → [8, 10, 9] (Pivot 8 in position 0)
+Now:
+Left: [].
+Right: [10, 9].
+Sort [10, 9]:
+
+Pivot = 9.
+Partitioning:
+csharp
+Copy code
+[10, 9]  (Pivot = 9)
+Compare 10 with 9: No swap, i = 0
+Swap 9 with 10 → [9, 10] (Pivot 9 in position 0)
+Now the array is fully sorted:
+csharp
+Copy code
+[1, 5, 7, 8, 9, 10] */
