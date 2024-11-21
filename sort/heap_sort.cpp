@@ -164,4 +164,8 @@ Copy code
 Final Sorted Array
 csharp
 Copy code
-[1, 3, 4, 5, 10] */
+[1, 3, 4, 5, 10] 
+Time Complexity
+Best, Worst, and Average Case: O(n log n) (heapify is O(log n) and repeated n times).
+Space Complexity: O(1) (in-place sorting).
+*/
