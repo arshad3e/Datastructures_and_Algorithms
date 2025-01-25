@@ -23,3 +23,10 @@ int main(){
 return 0;
 
 }
+
+/* Brute Force Approach
+Logic: Check all pairs of elements to find the pair that sums up to the target.
+Time Complexity: 
+𝑂(𝑛2) as we are using nested loops.
+Space Complexity: 
+𝑂(1), as no extra space is used. */
