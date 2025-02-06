@@ -77,3 +77,12 @@ int main() {
 
     return 0;
 }
+
+/* Key Changes and Explanations (C++ version):
+
+std::vector: Uses std::vector to represent the dynamic arrays. This is the standard way to work with arrays that can resize in C++.
+Pass by Reference: The merge function takes nums1 and nums2 by reference (vector<int>&). This is crucial because you need to modify nums1 directly (in-place).
+Includes: The <iostream> header is included for input/output (like cout), and <vector> is included for using std::vector.
+Output: The main function now prints the contents of the merged nums1 vector using a range-based for loop, which is a clean way to iterate over the elements of a vector. The \b\b is used to remove the trailing comma and space from the output.
+Example Usages: Just like the Python version, I've added a few example usages to demonstrate the function's behavior, including your test case and edge cases.
+The logic of the merge function itself is identical to the Python version. The core idea of using three pointers and merging from the end remains the same.  The only differences are related to the syntax and how arrays are handled in C++.*/
