@@ -47,4 +47,16 @@ int main() {
     return 0;
 }
 
-
+/*Explanation
+Example 1: prices = [7,1,5,3,6,4]
+Buy at 1, sell at 5 → Profit 4
+Buy at 3, sell at 6 → Profit 3
+Total Profit = 4 + 3 = 7
+Example 2: prices = [1,2,3,4,5]
+Buy at 1, sell at 2 → Profit 1
+Buy at 2, sell at 3 → Profit 1
+Buy at 3, sell at 4 → Profit 1
+Buy at 4, sell at 5 → Profit 1
+Total Profit = 4
+Example 3: prices = [7,6,4,3,1]
+No profitable trades possible → Profit = 0*/
