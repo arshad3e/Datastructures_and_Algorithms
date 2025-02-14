@@ -22,3 +22,17 @@ int main() {
 
     return 0;
 }
+
+/*Explanation (Step-by-Step)
+Example 1: nums = [2,3,1,1,4]
+Index 0: Jump range = 0 + 2 = 2 → maxReach = 2
+Index 1: Jump range = 1 + 3 = 4 → maxReach = 4
+Index 2: Jump range = 2 + 1 = 3 (no change)
+Index 3: Jump range = 3 + 1 = 4 (no change)
+Index 4: Reached successfully → Return true
+Example 2: nums = [3,2,1,0,4]
+Index 0: Jump range = 0 + 3 = 3 → maxReach = 3
+Index 1: Jump range = 1 + 2 = 3 (no change)
+Index 2: Jump range = 2 + 1 = 3 (no change)
+Index 3: Jump range = 3 + 0 = 3 (no change)
+Index 4: Can't reach 4 since maxReach = 3 → Return false*/
