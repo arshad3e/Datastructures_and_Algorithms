@@ -1,3 +1,4 @@
+/*add proper question*/
 #include<iostream>
 #include<vector>
 using namespace std;
