@@ -57,6 +57,4 @@ Buy at 1, sell at 2 → Profit 1
 Buy at 2, sell at 3 → Profit 1
 Buy at 3, sell at 4 → Profit 1
 Buy at 4, sell at 5 → Profit 1
-Total Profit = 4
-Example 3: prices = [7,6,4,3,1]
-No profitable trades possible → Profit = 0*/
+Total Profit = → Profit = 0*/
