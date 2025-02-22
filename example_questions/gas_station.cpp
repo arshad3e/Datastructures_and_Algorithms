@@ -19,3 +19,15 @@ int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
 
     return (total_gas >= total_cost) ? start_index : -1;
 }
+/*Step-by-Step Execution
+Station	Gas	Cost	Net Gas (gas[i] - cost[i])	Tank Balance	Start Index
+0	1	3	-2	-2 (Reset)	1
+1	2	4	-2	-2 (Reset)	2
+2	3	5	-2	-2 (Reset)	3
+3	4	1	+3	3	3
+4	5	2	+3	6	3
+0	1	3	-2	4	3
+1	2	4	-2	2	3
+2	3	5	-2	0	3
+3	4	1	+3	3	3 (Complete!)
+Since we successfully complete the circuit starting at index 3, we return 3.*/
